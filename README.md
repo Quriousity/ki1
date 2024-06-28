@@ -37,5 +37,11 @@ pip install -r requirements.txt
 source ant/bin/activate
 ```
 ```
+python a.py
+```
+```
 python b.py
+```
+```
+python c.py
 ```
