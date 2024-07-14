@@ -63,49 +63,49 @@ def AD():
     for ticker in tickers:
         sleep(0.1)
         # 최근 캔들 1000개
-        df = GetOHLCVRecent(client, ticker, '1w', 1000); sleep(0.1)
+        # df = GetOHLCVRecent(client, ticker, '1w', 1000); sleep(0.1)
+        # if CheckAD(df) == '정배열':
+        df = GetOHLCVRecent(client, ticker, '1d', 1000); sleep(0.1)
         if CheckAD(df) == '정배열':
-            df = GetOHLCVRecent(client, ticker, '1d', 1000); sleep(0.1)
+            df = GetOHLCVRecent(client, ticker, '4h', 1000); sleep(0.1)
             if CheckAD(df) == '정배열':
-                df = GetOHLCVRecent(client, ticker, '4h', 1000); sleep(0.1)
+                df = GetOHLCVRecent(client, ticker, '1h', 1000); sleep(0.1)
                 if CheckAD(df) == '정배열':
-                    df = GetOHLCVRecent(client, ticker, '1h', 1000); sleep(0.1)
+                    df = GetOHLCVRecent(client, ticker, '30m', 1000); sleep(0.1)
                     if CheckAD(df) == '정배열':
-                        df = GetOHLCVRecent(client, ticker, '30m', 1000); sleep(0.1)
+                        df = GetOHLCVRecent(client, ticker, '15m', 1000); sleep(0.1)
                         if CheckAD(df) == '정배열':
-                            df = GetOHLCVRecent(client, ticker, '15m', 1000); sleep(0.1)
+                            df = GetOHLCVRecent(client, ticker, '5m', 1000); sleep(0.1)
                             if CheckAD(df) == '정배열':
-                                df = GetOHLCVRecent(client, ticker, '5m', 1000); sleep(0.1)
+                                df = GetOHLCVRecent(client, ticker, '1m', 1000); sleep(0.1)
                                 if CheckAD(df) == '정배열':
-                                    df = GetOHLCVRecent(client, ticker, '1m', 1000); sleep(0.1)
-                                    if CheckAD(df) == '정배열':
-                                        # 현재 시간
-                                        t = datetimeToStr(datetime.now())
-                                        message = '{} {} {}'.format(ticker, t, '정배열')
-                                        print(message)
-                                        SendTelegram(message)
+                                    # 현재 시간
+                                    t = datetimeToStr(datetime.now())
+                                    message = '{} {} {}'.format(ticker, t, '정배열')
+                                    print(message)
+                                    SendTelegram(message)
 
-        df = GetOHLCVRecent(client, ticker, '1w', 1000); sleep(0.1)
+        # df = GetOHLCVRecent(client, ticker, '1w', 1000); sleep(0.1)
+        # if CheckAD(df) == '역배열':
+        df = GetOHLCVRecent(client, ticker, '1d', 1000); sleep(0.1)
         if CheckAD(df) == '역배열':
-            df = GetOHLCVRecent(client, ticker, '1d', 1000); sleep(0.1)
+            df = GetOHLCVRecent(client, ticker, '4h', 1000); sleep(0.1)
             if CheckAD(df) == '역배열':
-                df = GetOHLCVRecent(client, ticker, '4h', 1000); sleep(0.1)
+                df = GetOHLCVRecent(client, ticker, '1h', 1000); sleep(0.1)
                 if CheckAD(df) == '역배열':
-                    df = GetOHLCVRecent(client, ticker, '1h', 1000); sleep(0.1)
+                    df = GetOHLCVRecent(client, ticker, '30m', 1000); sleep(0.1)
                     if CheckAD(df) == '역배열':
-                        df = GetOHLCVRecent(client, ticker, '30m', 1000); sleep(0.1)
+                        df = GetOHLCVRecent(client, ticker, '15m', 1000); sleep(0.1)
                         if CheckAD(df) == '역배열':
-                            df = GetOHLCVRecent(client, ticker, '15m', 1000); sleep(0.1)
+                            df = GetOHLCVRecent(client, ticker, '5m', 1000); sleep(0.1)
                             if CheckAD(df) == '역배열':
-                                df = GetOHLCVRecent(client, ticker, '5m', 1000); sleep(0.1)
+                                df = GetOHLCVRecent(client, ticker, '1m', 1000); sleep(0.1)
                                 if CheckAD(df) == '역배열':
-                                    df = GetOHLCVRecent(client, ticker, '1m', 1000); sleep(0.1)
-                                    if CheckAD(df) == '역배열':
-                                        # 현재 시간
-                                        t = datetimeToStr(datetime.now())
-                                        message = '{} {} {}'.format(ticker, t, '역배열')
-                                        print(message)
-                                        SendTelegram(message)
+                                    # 현재 시간
+                                    t = datetimeToStr(datetime.now())
+                                    message = '{} {} {}'.format(ticker, t, '역배열')
+                                    print(message)
+                                    SendTelegram(message)
 
 # 스케줄 등록
 # 매주 월요일 9시 10초
